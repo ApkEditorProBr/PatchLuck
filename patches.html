@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+	
+<html lang="pt" class="translated-ltr">
+<head>
+<meta name="viewport" content="user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<body class="html">
+</head>
+    <!-- meu css -->
+    <link href="css/patches.css" rel="stylesheet">
+
+</head>
+</body>
+<style>
+body {
+	background-size: cover;
+	background-image: url(fundo.gif);
+    background-repeat: no-repeat;
+}
+</style>
+
+<br></br>
+<a href="index.html"><button class="sair" onclick="window.open('', '_self', ''); window.close();">Voltar</button></a>
+<br></br><br></br><br></br><br></br>
+
+<center>
+<h1>EXEMPLO DE PATCHES PERSONALIZADOS</h1>
+</center>
+<br></br>
+
+<center>
+<button type="button" class="collapsible">Excluir diretório</button>
+
+<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+
+[BEGIN]
+Autor desse patch: BruMarti
+[DELETE_FOLDER_IN_APK]
+
+{"name":"lib/armeabi-v7a"}
+{"name":"lib/armeabi-v7a"}
+
+[END]
+O diretório armeabi-v7a foi excluído!
+</textarea>
+<br>
+</br>
+
+<button type="button" class="collapsible">Excluir arquivos</button>
+<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+
+[BEGIN]
+ Autor desse patch: BruMarti
+ Excluir arquivos ✓
+[DELETE_FILE_IN_APK]
+
+{"file_name":"res/raw/video_ads.css"}
+{"file_name":"res/raw/ads.css"}
+
+[END]
+Parabéns os arquivos video_ads.css e ads.css formam excluídos!
+</textarea>
+<br>
+</br>
+
+<button type="button" class="collapsible">Renomear arquivos</button>
+<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+
+[BEGIN]
+[RENAME_FILE_IN_APK]
+
+{"file_name":"lib/armeabi-v7a/libcr3engine-3-2-X.so"}
+{"new_file_name":"lib/armeabi-v7a/temp.so"}
+
+[END]
+Parabéns o arquivo libcr3engine-3-2-X.so ganhou um novo nome!
+</textarea>
+</center>
+</br>
+
+<button type="button" class="collapsible">Substituição interna</button>
+<textarea style="height: 350px" class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+
+[FILE_IN_APK]
+[BEGIN]
+•Substituir exemplo por texto
+
+{"name":"assets/bin/Data/Managed/O7SharpCompress.dll"}
+{"original":"65 78 65 6D 70 6C 6F "}
+{"replaced":"74 65 78 74 6F ?? ??"}
+
+[END]
+Parabéns o exemplo foi substituído!
+
+</textarea>
+</center>
+<br>
+</br>
+
+<button type="button" class="collapsible">Substituir arquivo classes.dex</button>
+<textarea class="content" readonly onKeyPress="txtLog_OnKeyPress(event)">
+
+[BEGIN]
+•Substituir arquivo classes.dex pelo modificado!
+[ADD_FILE_IN_APK]
+
+{"file_name":"classes.dex"}
+{"to":"classes.dex"}
+
+[END]
+Parabéns arquivo classes.dex foi substituído!
+</textarea>
+</center>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+
+<script src="js/script.js"></script>
+<br>
+</br>
+
+</body>
+</html>
