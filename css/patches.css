@@ -35,7 +35,7 @@ body {
   background-color: #f1f1f1;
   border: 2px solid black;
   left: 20px;
-  width: 99%;
+  width: 94%;
   height: 300px;
 }
 
@@ -75,4 +75,5 @@ body {
 
   cursor: none;
   }
+
 }
